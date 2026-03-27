@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Developer & Martial Artist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ededed; scroll-behavior: smooth; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        /* Kept project card hover as it helps navigation, but removed image hovers */
+        .card-hover:hover { border-color: #3b82f6; transform: translateY(-4px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="selection:bg-blue-500 selection:text-white">
+
+   <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center relative z-10">
+    <div class="mono text-blue-500 font-bold text-xl tracking-tighter">./dev_identity</div>
+    <div class="space-x-6 text-sm mono text-gray-400">
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="contact.html" class="border border-zinc-800 px-4 py-2 rounded hover:bg-white hover:text-black transition">Contact</a>
+    </div>
+</nav>
+
+    <section class="max-w-6xl mx-auto px-6 pt-16 pb-32 flex flex-col md:flex-row items-center gap-12 md:gap-16">
+        
+        <div class="md:w-2/5 flex justify-center md:justify-start">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                <img 
+                    src="image_0.jpg" 
+                    alt="Professional Portrait" 
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+
+        <div class="md:w-3/5">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-[1.1]">
+                Building systems with <span class="text-blue-500">Java</span> & <span class="text-blue-500">Python</span>.
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl leading-relaxed mb-10">
+                B.Tech IT Student at DDU. Specialized in **Backend Architecture**, **DSA**, and minimalist design. 1st Dan Black Belt in Karate.
+            </p>
+            <div class="flex flex-wrap gap-6 mono text-sm">
+                <a href="https://www.linkedin.com/in/pranjal-adajania-83659a284/" target="_blank" class="text-gray-400 hover:text-white underline decoration-zinc-700 underline-offset-8 transition">LinkedIn</a>
+                <a href="https://github.com/Pranjal-Adajaina-IT" target="_blank" class="text-gray-400 hover:text-white underline decoration-zinc-700 underline-offset-8 transition">GitHub</a>
+                <a href="https://www.instagram.com/pranjal_adajania/" target="_blank" class="text-gray-400 hover:text-white underline decoration-zinc-700 underline-offset-8 transition">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-6xl mx-auto px-6 mb-32">
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden backdrop-blur-sm">
+            <div class="bg-zinc-800/50 px-4 py-3 flex justify-between items-center border-b border-zinc-800">
+                <div class="flex gap-2">
+                    <div class="w-3 h-3 rounded-full bg-zinc-700"></div>
+                    <div class="w-3 h-3 rounded-full bg-zinc-700"></div>
+                    <div class="w-3 h-3 rounded-full bg-zinc-700"></div>
+                </div>
+                <span class="text-xs text-zinc-500 mono uppercase tracking-widest">Runtime_Environment</span>
+            </div>
+            <div class="p-8 mono text-sm md:text-base leading-8">
+                <p class="text-zinc-500">// Currently focused on scaling backend logic</p>
+                <p><span class="text-blue-400">status</span> = <span class="text-green-400">"Building_Impactful_Tech"</span></p>
+                <p><span class="text-blue-400">working_on</span> = [<span class="text-yellow-200">"YourPhysio_Dashboard"</span>, <span class="text-yellow-200">"AI_FakeNews_Detector"</span>]</p>
+                <p><span class="text-blue-400">learning</span> = [<span class="text-purple-400">"Django_Rest_Framework"</span>, <span class="text-purple-400">"System_Design"</span>]</p>
+                <p><span class="text-blue-400">discipline</span> = <span class="text-orange-400">"Karate_Black_Belt_Mindset"</span></p>
+                <p class="mt-4 animate-pulse inline-block w-2 h-5 bg-blue-500"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="max-w-6xl mx-auto px-6 mb-32">
+        <div class="flex items-center gap-6 mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-white">Completed Missions</h2>
+            <div class="h-[1px] bg-zinc-800 flex-grow"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="group border border-zinc-800 p-10 rounded-2xl card-hover bg-zinc-900/30">
+                <span class="text-blue-500 mono text-xs mb-4 block uppercase tracking-widest">Featured Project</span>
+                <h3 class="text-2xl font-bold mb-4 tracking-tight group-hover:text-blue-400 transition">SAHAYAK</h3>
+                <p class="text-gray-400 leading-relaxed mb-8">A Disaster Management System designed for efficient resource tracking and rescue operations during crises.</p>
+                <div class="flex flex-wrap gap-3 mono text-[10px] text-zinc-500">
+                    <span class="border border-zinc-800 px-3 py-1 rounded-full tracking-wider">Architecture</span>
+                    <span class="border border-zinc-800 px-3 py-1 rounded-full tracking-wider">Crisis Mgmt</span>
+                </div>
+            </div>
+
+            <div class="group border border-zinc-800 p-10 rounded-2xl card-hover bg-zinc-900/30">
+                <span class="text-zinc-600 mono text-xs mb-4 block uppercase tracking-widest">Diploma Capstone</span>
+                <h3 class="text-2xl font-bold mb-4 tracking-tight group-hover:text-blue-400 transition">Digital Notice Board</h3>
+                <p class="text-gray-400 leading-relaxed mb-8">Centralized notification system built with Java EE, JSP, and MySQL for academic environments.</p>
+                <div class="flex flex-wrap gap-3 mono text-[10px] text-zinc-500">
+                    <span class="border border-zinc-800 px-3 py-1 rounded-full tracking-wider">Java EE</span>
+                    <span class="border border-zinc-800 px-3 py-1 rounded-full tracking-wider">MySQL</span>
+                </div>
+            </div>
+
+            <div class="group border border-zinc-800 p-10 rounded-2xl card-hover bg-zinc-900/30">
+                <span class="text-zinc-600 mono text-xs mb-4 block uppercase tracking-widest">Research & ML</span>
+                <h3 class="text-2xl font-bold mb-4 tracking-tight group-hover:text-blue-400 transition">Face Detection</h3>
+                <p class="text-gray-400 leading-relaxed mb-8">Computer Vision implementation using Python and OpenCV for real-time attribute recognition.</p>
+                <div class="flex flex-wrap gap-3 mono text-[10px] text-zinc-500">
+                    <span class="border border-zinc-800 px-3 py-1 rounded-full tracking-wider">Python</span>
+                    <span class="border border-zinc-800 px-3 py-1 rounded-full tracking-wider">OpenCV</span>
+                </div>
+            </div>
+
+            <div class="group border border-zinc-800 p-10 rounded-2xl card-hover bg-zinc-900/30">
+                <span class="text-zinc-600 mono text-xs mb-4 block uppercase tracking-widest">Web3 Concept</span>
+                <h3 class="text-2xl font-bold mb-4 tracking-tight group-hover:text-blue-400 transition">Coinx</h3>
+                <p class="text-gray-400 leading-relaxed mb-8">Experimental project focusing on blockchain-based transaction structures and data integrity.</p>
+                <div class="flex flex-wrap gap-3 mono text-[10px] text-zinc-500">
+                    <span class="border border-zinc-800 px-3 py-1 rounded-full tracking-wider">Blockchain</span>
+                    <span class="border border-zinc-800 px-3 py-1 rounded-full tracking-wider">Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-6xl mx-auto px-6 py-24 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+            <p class="text-white font-bold mono">Stay Focused.</p>
+            <p class="text-gray-600 text-xs mt-1 mono">Built by a Black Belt Coder &copy; 2026</p>
+        </div>
+        <div class="flex gap-8 text-xs mono text-gray-500">
+            <a href="https://www.instagram.com/pranjal_adajania/" target="_blank" class="hover:text-blue-500 transition tracking-widest uppercase">Instagram</a>
+            <a href="https://github.com/Pranjal-Adajaina-IT" target="_blank" class="hover:text-blue-500 transition tracking-widest uppercase">GitHub</a>
+            <a href="https://www.linkedin.com/in/pranjal-adajania-83659a284/" target="_blank" class="hover:text-blue-500 transition tracking-widest uppercase">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+</html>
