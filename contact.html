@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Pranjal Adajania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ededed; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        input, textarea { background-color: #161616 !important; border-color: #27272a !important; color: white !important; }
+        input:focus, textarea:focus { border-color: #3b82f6 !important; outline: none; }
+    </style>
+</head>
+<body class="selection:bg-blue-500 selection:text-white">
+
+    <nav class="max-w-4xl mx-auto px-6 py-12 flex justify-between items-center">
+        <a href="index.html" class="mono text-zinc-500 hover:text-white transition group">
+            <span class="inline-block transition-transform group-hover:-translate-x-1">←</span> Back to Home
+        </a>
+    </nav>
+
+    <section class="max-w-4xl mx-auto px-6 py-10">
+        <h1 class="text-5xl font-bold mb-4 tracking-tight">Get in touch.</h1>
+        <p class="text-zinc-400 mb-12 text-lg">Open for collaborations, internship opportunities, or just a technical chat.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            
+            <div class="space-y-10">
+                <div>
+                    <h3 class="mono text-blue-500 text-xs uppercase tracking-widest mb-4">Email Me</h3>
+                    <a href="mailto:adajaniapranjal1787@gmail.com" class="text-xl hover:text-blue-400 transition underline underline-offset-8 decoration-zinc-800">
+                        adajaniapranjal1787@gmail.com
+                    </a>
+                </div>
+
+                <div>
+                    <h3 class="mono text-blue-500 text-xs uppercase tracking-widest mb-4">Social Presence</h3>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://www.linkedin.com/in/pranjal-adajania-83659a284/" target="_blank" class="text-zinc-400 hover:text-white transition">LinkedIn ↗</a>
+                        <a href="https://github.com/Pranjal-Adajaina-IT" target="_blank" class="text-zinc-400 hover:text-white transition">GitHub ↗</a>
+                        <a href="https://www.instagram.com/pranjal_adajania/" target="_blank" class="text-zinc-400 hover:text-white transition">Instagram ↗</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="mono text-blue-500 text-xs uppercase tracking-widest mb-4">Location</h3>
+                    <p class="text-zinc-400">Surat / Nadiad, India</p>
+                    <p class="text-xs text-zinc-600 mt-2 mono">Available for remote work & onsite internships.</p>
+                </div>
+            </div>
+
+            <div class="bg-zinc-900/30 p-8 rounded-2xl border border-zinc-800">
+                <form onsubmit="handleContactForm(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-xs mono text-zinc-500 uppercase mb-2">Name</label>
+                        <input type="text" id="sender_name" required class="w-full px-4 py-3 rounded-lg border border-zinc-800 bg-zinc-900 focus:ring-1 focus:ring-blue-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs mono text-zinc-500 uppercase mb-2">Subject</label>
+                        <input type="text" id="email_subject" placeholder="Project Inquiry / Hi!" required class="w-full px-4 py-3 rounded-lg border border-zinc-800 bg-zinc-900 focus:ring-1 focus:ring-blue-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs mono text-zinc-500 uppercase mb-2">Message</label>
+                        <textarea id="email_message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-zinc-800 bg-zinc-900 focus:ring-1 focus:ring-blue-500 transition"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-blue-900/20">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="max-w-4xl mx-auto px-6 py-20 mt-20 border-t border-zinc-900">
+        <p class="text-center text-zinc-600 text-xs mono uppercase tracking-widest">
+            Always grinding. See you in the console.
+        </p>
+    </footer>
+
+    <script>
+    function handleContactForm(e) {
+        e.preventDefault();
+        
+        // Form se data uthana
+        const name = document.getElementById('sender_name').value;
+        const subject = document.getElementById('email_subject').value;
+        const message = document.getElementById('email_message').value;
+        
+        // Email body design karna
+        const emailBody = `Hi Pranjal,\n\nMy name is ${name}.\n\nMessage:\n${message}`;
+        
+        // Mailto URL create karna
+        const mailtoUrl = `mailto:adajaniapranjal1787@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+        
+        // Browser ko force karna mail app kholne ke liye (Better Method)
+        const tempLink = document.createElement('a');
+        tempLink.href = mailtoUrl;
+        tempLink.click(); // Yeh har browser par click trigger karega
+        
+        // User ko batana ki kya hua
+        alert("Redirecting to your Email app... Please hit 'Send' there.");
+    }
+</script>
+
+</body>
+</html>
